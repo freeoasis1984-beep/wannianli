@@ -1,0 +1,228 @@
+.page {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 60rpx;
+  background: linear-gradient(180deg, #fff5f3 0%, #f5f6fa 280rpx);
+}
+
+/* 頂部 hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  padding: 36rpx 32rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 20rpx rgba(192, 57, 43, 0.2);
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-day {
+  font-size: 40rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+
+.hero-week {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  opacity: 0.85;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-lunar {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.hero-ganzhi {
+  font-size: 24rpx;
+  margin-top: 6rpx;
+  opacity: 0.85;
+}
+
+.hero-festival {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 4rpx 14rpx;
+  border-radius: 999rpx;
+}
+
+/* 工具列 */
+.toolbar {
+  margin-top: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 16rpx 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+
+.tool-btn {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #c0392b;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.tool-btn:active {
+  background: #ffe9e5;
+}
+
+.tool-title {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool-title-text {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.tool-title-sub {
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+/* 星期 */
+.week-row {
+  margin-top: 24rpx;
+  display: flex;
+  background: #fff;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 16rpx 0;
+}
+
+.week-cell {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  font-weight: 500;
+}
+
+.week-cell.weekend {
+  color: #c0392b;
+}
+
+/* 日期格 */
+.day-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 0 0 20rpx 20rpx;
+  padding: 10rpx 0 20rpx;
+}
+
+.day-cell {
+  width: calc(100% / 7);
+  height: 110rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.day-num {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.day-lunar {
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.day-lunar.festival {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.day-lunar.month-head {
+  color: #2980b9;
+  font-weight: 600;
+}
+
+.day-cell.weekend .day-num {
+  color: #c0392b;
+}
+
+.day-cell.out-month .day-num,
+.day-cell.out-month .day-lunar {
+  color: #ccc;
+}
+
+.day-cell.today .day-num {
+  color: #fff;
+  background: #c0392b;
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.day-cell.today .day-lunar {
+  color: #c0392b;
+}
+
+.day-cell.selected:not(.today)::after {
+  content: '';
+  position: absolute;
+  width: 76rpx;
+  height: 90rpx;
+  border: 2rpx solid #c0392b;
+  border-radius: 16rpx;
+}
+
+/* tips（可點擊觸發廣告） */
+.tips {
+  margin-top: 28rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease;
+}
+
+.tips:active {
+  background: #fff5f3;
+}
+
+.tips-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 8rpx;
+}
+
+.tips-text {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.6;
+}

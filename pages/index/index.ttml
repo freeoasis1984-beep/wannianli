@@ -1,0 +1,54 @@
+<view class="page">
+  <!-- 頂部：今天日期卡 -->
+  <view class="hero">
+    <view class="hero-left">
+      <text class="hero-day">{{selectedInfo.solar}}</text>
+      <text class="hero-week">{{selectedInfo.week}}</text>
+    </view>
+    <view class="hero-right">
+      <text class="hero-lunar">{{selectedInfo.lunar}}</text>
+      <text class="hero-ganzhi">{{selectedInfo.ganZhi}}</text>
+      <text class="hero-festival">{{selectedInfo.festival}}</text>
+    </view>
+  </view>
+
+  <!-- 月份切換 -->
+  <view class="toolbar">
+    <view class="tool-btn" bindtap="onPrevYear">«</view>
+    <view class="tool-btn" bindtap="onPrevMonth">‹</view>
+    <view class="tool-title" bindtap="onBackToday">
+      <text class="tool-title-text">{{year}} 年 {{month}} 月</text>
+      <text class="tool-title-sub">點此回到今天</text>
+    </view>
+    <view class="tool-btn" bindtap="onNextMonth">›</view>
+    <view class="tool-btn" bindtap="onNextYear">»</view>
+  </view>
+
+  <!-- 星期欄 -->
+  <view class="week-row">
+    <block tt:for="{{weekNames}}" tt:key="*this">
+      <view class="week-cell {{index === 0 || index === 6 ? 'weekend' : ''}}">{{item}}</view>
+    </block>
+  </view>
+
+  <!-- 日期格 -->
+  <view class="day-grid">
+    <block tt:for="{{days}}" tt:key="key">
+      <view
+        class="day-cell {{item.inMonth ? '' : 'out-month'}} {{item.isToday ? 'today' : ''}} {{item.isSelected ? 'selected' : ''}} {{item.isWeekend && item.inMonth ? 'weekend' : ''}}"
+        data-day="{{item.day}}"
+        data-inmonth="{{item.inMonth}}"
+        bindtap="onSelectDay"
+      >
+        <text class="day-num">{{item.day}}</text>
+        <text class="day-lunar {{item.isFestival ? 'festival' : ''}} {{item.isMonthHead ? 'month-head' : ''}}">{{item.lunar}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 提示資訊（連續點擊整塊觸發廣告） -->
+  <view class="tips" bindtap="onTipsTap">
+    <text class="tips-title">小貼士</text>
+    <text class="tips-text">點擊任意日期可查看農曆與節日資訊，左右箭頭可切換月份，雙箭頭可切換年份。</text>
+  </view>
+</view>

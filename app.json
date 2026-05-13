@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c0392b",
+    "navigationBarTitleText": "萬年曆",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2"
+}

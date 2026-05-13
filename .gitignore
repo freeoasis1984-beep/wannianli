@@ -1,0 +1,20 @@
+# 抖音/微信小程序常见忽略
+.DS_Store
+Thumbs.db
+
+# 开发者工具产物
+project.private.config.json
+**/miniprogram_npm/
+
+# 依赖与缓存
+node_modules/
+.cache/
+.idea/
+.vscode/
+
+# 日志
+*.log
+
+# 本地构建临时
+dist/
+build/
