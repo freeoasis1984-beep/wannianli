@@ -1,0 +1,14 @@
+{
+  "name": "wannianli-cloud",
+  "version": "1.0.0",
+  "description": "Minimal Node server for douyincloud deployment of 万年历 mini program",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "koa": "^2.14.2"
+  }
+}
